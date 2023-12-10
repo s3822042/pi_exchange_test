@@ -1,0 +1,6 @@
+<div (mouseout)="isHovered = false" (mouseover)="isHovered = true" class="gif-item">
+  <img [alt]="gif?.title" [src]="gif?.images?.fixed_height?.url" class="gif-image"/>
+  <div *ngIf="isHovered" class="gif-overlay">
+    <p>{{ gif?.title }}</p>
+  </div>
+</div>

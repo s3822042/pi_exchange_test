@@ -1,0 +1,19 @@
+<div (click)="onClose()" class="modal-overlay">
+  <div class="modal-content">
+    <div class="modal-header">
+      <div class="user-avatar">
+        <img [src]="gif?.user?.avatar_url" [alt]="gif?.user?.username" />
+      </div>
+      <div class="user-details">
+        <h2>{{ gif?.user?.display_name }}</h2>
+      </div>
+      <button (click)="onClose()">Close</button>
+    </div>
+    <div class="modal-body">
+      <h3>{{ gif?.title }}</h3>
+      <p class="user-info">Rating: {{ gif?.rating || "No rating" }}</p>
+      <p class="user-info">Trending Since: {{ gif?.trending_datetime || "No trending datetime" }}</p>
+      <p class="user-info">Source: {{ gif?.source || "No source" }}</p>
+    </div>
+  </div>
+</div>

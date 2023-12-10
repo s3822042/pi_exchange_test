@@ -1,0 +1,36 @@
+/* gif-item.component.scss */
+.gif-item {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+
+  .gif-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .gif-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  &:hover {
+    .gif-overlay {
+      opacity: 1;
+    }
+
+    .gif-image {
+      transform: scale(1.1);
+    }
+  }
+}

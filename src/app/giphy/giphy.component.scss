@@ -1,0 +1,51 @@
+.giphy-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .feature-text {
+    margin-bottom: 20px;
+
+    p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 16px;
+        margin-bottom: 8px;
+        &:before {
+          content: '\2022'; /* Bullet point */
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .gif-search {
+    margin-bottom: 20px;
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+  }
+
+  .gif-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

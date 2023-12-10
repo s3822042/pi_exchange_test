@@ -1,0 +1,21 @@
+<div class="giphy-container">
+  <h1 class="page-title">GIF Explorer</h1>
+
+  <div class="feature-text">
+    <p>Features:</p>
+    <ul>
+      <li>See a list of trending GIFs on Giphy</li>
+      <li>Search for GIFs and see results updated in real-time</li>
+      <li>Click on each GIF to see details (username and rating)</li>
+    </ul>
+  </div>
+
+  <div class="gif-search">
+    <input (input)="search()" [(ngModel)]="searchTerm" placeholder="Search GIFs..." type="text" />
+  </div>
+
+  <div class="gif-container">
+    <app-gif-item (click)="openModal(gif)" *ngFor="let gif of gifs" [gif]="gif"></app-gif-item>
+    <app-gif-modal (closeModal)="closeModal()" *ngIf="selectedGif" [gif]="selectedGif"></app-gif-modal>
+  </div>
+</div>
