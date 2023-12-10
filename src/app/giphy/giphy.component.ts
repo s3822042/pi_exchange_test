@@ -29,7 +29,7 @@ export class GiphyComponent implements OnInit {
   loading: boolean = false;
 
   private destroy$ = new Subject<void>();
-  private searchSubscription?: Subscription; // Add this line
+  private searchSubscription?: Subscription;
 
   constructor(private giphyService: GiphyService) {
   }
